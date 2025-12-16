@@ -1,0 +1,5 @@
+[
+  { "id": "c001", "name": "Bamboo Nordic Chair", "stock": 12, "eco_score": "A+", "price": 145 },
+  { "id": "c002", "name": "Recycled Steel Stool", "stock": 5, "eco_score": "A", "price": 89 },
+  { "id": "c003", "name": "Sustainable Oak Table", "stock": 7, "eco_score": "A+", "price": 220 }
+]

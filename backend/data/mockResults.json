@@ -1,0 +1,26 @@
+{
+  "senior-eco-architect": {
+    "summary": "This furniture piece demonstrates high-integrity craftsmanship with a focus on low-carbon timber and modular assembly.",
+    "sustainability_evaluation": {
+      "positive_indicators": ["FSC Timber", "Low-VOC Finish", "Disassembly Ready"],
+      "risks_or_unknowns": ["Adhesive emissions", "Transport log"]
+    },
+    "eco_score": "A+"
+  },
+  "green-procurement-manager": {
+    "summary": "Compliance analysis indicates the manufacturer holds ISO 14001 status. Item is suitable for LEED-certified projects.",
+    "sustainability_evaluation": {
+      "positive_indicators": ["Supply Chain Audit", "Recycled Content", "ESG Rated"],
+      "risks_or_unknowns": ["Lead times", "Tariff impact"]
+    },
+    "eco_score": "B+"
+  },
+  "sustainability-marketing-expert": {
+    "summary": "A flagship product for eco-storytelling, perfect for brands targeting the conscious luxury consumer segment.",
+    "sustainability_evaluation": {
+      "positive_indicators": ["Marketable Narrative", "Natural Aesthetics", "Brand Alignment"],
+      "risks_or_unknowns": ["Greenwashing risk", "Technical verification"]
+    },
+    "eco_score": "A"
+  }
+}
