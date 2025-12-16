@@ -1,6 +1,4 @@
----
-
-# 🌱 Persona Studio: AI-Driven Eco-Sourcing Agent
+ Persona Studio: AI-Driven Eco-Sourcing Agent
 
 **Persona Studio** is a hybrid **multimodal and reasoning-driven AI agent** that streamlines sustainable procurement decisions. Powered by **Gemini 1.5 Flash**, the system analyzes product images and contextual constraints, then generates **persona-specific sustainability insights** for architects, procurement managers, and marketing teams.
 
