@@ -1,58 +1,91 @@
-Persona Studio: AI-Driven Eco-Sourcing Agent
+---
 
-**Persona Studio** is a hybrid **Multimodal + Generative AI system** designed to modernize sustainable procurement workflows. Powered by **Gemini 1.5 Flash**, the platform enables users to dynamically switch between expert personas—such as a **Visual Analyst** and a **Generative Consultant**—to extract sustainability intelligence from both **images and text**.
+# 🌱 Persona Studio: AI-Driven Eco-Sourcing Agent
 
-The result is an intelligent, role-aware sourcing assistant that bridges the gap between design intent and responsible procurement.
+**Persona Studio** is a hybrid **multimodal and reasoning-driven AI agent** that streamlines sustainable procurement decisions. Powered by **Gemini 1.5 Flash**, the system analyzes product images and contextual constraints, then generates **persona-specific sustainability insights** for architects, procurement managers, and marketing teams.
+
+By combining **visual understanding**, **function-backed data retrieval**, and **persistent persona reasoning**, Persona Studio bridges the gap between design intent and responsible sourcing—efficiently and at scale.
 
 ---
 
 ## 🚨 Problem Statement
 
-Sustainable sourcing decisions are frequently delayed by a **knowledge and tooling gap**. Architects and procurement teams must manually interpret fragmented sustainability data across formats, vendors, and stakeholder expectations.
+Sustainable sourcing is slowed by a persistent **knowledge and tooling gap**. Decision-makers must manually interpret fragmented sustainability data while balancing the differing priorities of multiple stakeholders.
 
 ### Key Challenges
 
-* **Data Fragmentation:** Sustainability signals exist across images, PDFs, product sheets, and unstructured text.
-* **Persona Bias:** Different stakeholders (architects, marketers, procurement managers) require distinct insights from the same product.
-* **Resource Inefficiency:** Repetitive API calls and manual analysis increase latency and cost.
+* **Fragmentation:** Sustainability information exists across images, PDFs, and unstructured text.
+* **Persona Bias:** Different roles require different insights from the same product.
+* **Resource Inefficiency:** Repetitive analysis and API calls increase latency and cost.
+
+Existing tools treat sustainability as static data, not as a **contextual, role-dependent reasoning problem**.
 
 ---
 
 ## 💡 The Solution
 
-**Persona Studio** introduces a persona-driven AI “studio” that acts as an intelligent thought partner for sustainable decision-making.
+Persona Studio introduces a **persona-driven AI “studio”** that acts as an intelligent thought partner for sustainable procurement.
 
 ### Core Capabilities
 
-* **Hybrid Intelligence:** Combines visual understanding and text-based reasoning to generate holistic sustainability assessments.
-* **Role-Based Reasoning:** Adapts depth, tone, and analytical focus based on the selected expert persona.
-* **Resilient Architecture:** Includes a smart fallback (mock inference engine) to ensure uninterrupted operation during API throttling or high-traffic usage.
+* **Hybrid Multimodal Intelligence**
+  Uses Gemini’s vision and reasoning capabilities to extract eco-signals directly from product images and text inputs.
+
+* **Persona-Aware Reasoning**
+  Adapts tone, depth, and analytical focus based on a selected expert persona:
+
+  * Eco-Architect
+  * Procurement Manager
+  * Sustainability Marketer
+
+* **Resource-Efficient Architecture**
+  Implements content hashing, local caching, and a fallback mock engine to ensure reliable operation within free-tier API limits.
 
 ---
 
 ## 🛠️ Technical Approach
 
-### 1. Multimodal Foundation
+### 1. Multimodal Analysis (Gemini Core Feature)
 
-Leverages **Gemini’s vision capabilities** to infer materials, finishes, and construction methods from raw furniture images.
+Gemini analyzes raw furniture images to infer:
+
+* Material composition
+* Construction methods and joinery
+* Visual indicators of durability and sustainability
+
+This multimodal reasoning is essential and cannot be achieved with traditional rule-based systems.
+
+---
 
 ### 2. Persona Mapping Layer
 
-A configurable instruction system that primes the model to reason as:
+A persistent configuration layer primes Gemini to reason as different domain experts, ensuring **consistent, high-quality outputs with minimal back-and-forth**—aligned with the *Maximized Context* theme.
 
-* Eco-Architect
-* Procurement Manager
-* Marketing & Sustainability Strategist
+---
 
-### 3. Efficiency & Reliability Layer
+### 3. Function Calling & Automation
 
-* Content-hashing cache to avoid redundant requests
-* Automatic fallback to mock data when API limits are reached
-  This aligns directly with the **Resource-Efficient Agent** design philosophy.
+Based on the analysis, Gemini triggers a **mock function call** to query a structured sustainability inventory:
 
-### 4. Glassmorphism UI
+* Eco-ratings
+* Lifecycle data
+* Circularity risks
 
-A clean, modern dashboard built for professional design studios, emphasizing clarity, focus, and visual hierarchy.
+The system returns a **single structured action plan**, aligning with the *Resource-Efficient Agent* theme.
+
+---
+
+### 4. Efficiency & Reliability Layer
+
+* Content-hashing cache prevents duplicate API calls
+* Automatic fallback to mock inference ensures uninterrupted demos and testing
+  This design prioritizes **logic over load**, as recommended for the free tier.
+
+---
+
+### 5. Professional Studio UI
+
+A glassmorphism-based dashboard designed for design studios and procurement teams, emphasizing clarity and usability.
 
 ---
 
@@ -62,19 +95,19 @@ A clean, modern dashboard built for professional design studios, emphasizing cla
 eco-architect-agent/
 ├── frontend/
 │   ├── src/
-│   │   ├── App.jsx          # Main Studio Dashboard (UI Logic)
-│   │   ├── App.css          # Glassmorphism Styling
-│   │   └── api.js           # Backend Communication Layer
+│   │   ├── App.jsx          # Studio Dashboard Logic
+│   │   ├── App.css          # Glassmorphism UI
+│   │   └── api.js           # Backend Interface
 │   └── index.html           # Entry Point
 ├── backend/
 │   ├── data/
 │   │   ├── inventory.json   # Mock Sustainable Inventory
-│   │   └── mockResults.json # Fallback Generative Content
+│   │   └── mockResults.json # Fallback Outputs
 │   ├── config/
-│   │   └── personas.js      # Persona System Instructions
+│   │   └── personas.js      # Persona System Prompts
 │   ├── services/
-│   │   └── geminiService.js # Gemini API & Logic Branching
-│   ├── server.js            # Express API Server
+│   │   └── geminiService.js # Gemini API & Function Logic
+│   ├── server.js            # Express Server
 │   └── .env                 # API Configuration
 └── README.md
 ```
@@ -84,41 +117,39 @@ eco-architect-agent/
 ## 🔮 Future Scope
 
 * **Live Inventory Sync**
-  Real-time integration with supplier APIs (e.g., IKEA, West Elm) for pricing, availability, and sustainability scoring.
+  Real-time integration with supplier APIs for pricing, availability, and sustainability metrics.
 
 * **PDF Report Generation**
-  Export persona-specific sustainability narratives into client-ready PDF reports.
+  Export persona-specific sustainability narratives for client presentations.
 
 * **Collective Reasoning Mode**
-  An “Agent Roundtable” where all personas debate and evaluate a single product collaboratively.
+  A multi-persona “Agent Roundtable” where all roles debate a product’s sustainability.
 
 * **Certification Scanner**
-  OCR-based verification of sustainability certifications (FSC, Cradle to Cradle) cross-checked against visual product data.
+  OCR-based verification of sustainability certificates (FSC, Cradle to Cradle) cross-checked against visual product analysis.
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Prerequisites
+### Prerequisites
 
 * Node.js (v18+)
 * Google Gemini API Key from [Google AI Studio](https://aistudio.google.com/)
 
----
+### Installation
 
-### 2. Installation
-
-#### Backend
+**Backend**
 
 ```bash
 cd backend
 npm install
-# Create a .env file and add:
+# Create a .env file with:
 # GEMINI_API_KEY=your_key_here
 node server.js
 ```
 
-#### Frontend
+**Frontend**
 
 ```bash
 cd frontend
@@ -128,10 +159,8 @@ npm run dev
 
 ---
 
-### 🌍 Why Persona Studio?
+## 🏁 Why Persona Studio?
 
-Persona Studio demonstrates how **multimodal AI + persona-aware reasoning** can transform sustainability from a compliance task into a strategic design advantage—making eco-conscious decisions faster, clearer, and more accessible.
+Persona Studio demonstrates how **multimodal AI, persona-driven reasoning, and function calling** can transform sustainability from a manual research task into an **intelligent, efficient decision-making workflow**—fully aligned with the Gemini API’s strengths.
 
 ---
-
-Just say the word 👌
